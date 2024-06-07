@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poetsen+One&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.corpo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.caixa {
+  border-radius: 30px;
+  padding: 50px;
+  background: transparent;
+  border: 2px solid rgb(175, 175, 175);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dados {
+  margin: 20px;
+}
+
+label {
+  font-size: 2rem;
+}
+
+input {
+  width: 400px;
+  height: 52px;
+  margin: 20px 0px;
+  border-radius: 18px;
+  border: none;
+  background-color: #EEEFDD;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px;
+}
+
+input::placeholder {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.caixaBotao {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnCadastrar {
+  padding: 10px;
+  border-radius: 18px;
+  border: none;
+  background-color: #F09964;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btnCadastrar:hover {
+  background-color: #782A1E;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btnVisualizar {
+  padding: 10px;
+  border-radius: 18px;
+  border: none;
+  background-color: #7FB2AD;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btnVisualizar:hover {
+  background-color: #FFADA2;
+  cursor: pointer;
+  transform: scale(1.2);
 }
