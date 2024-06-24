@@ -2,6 +2,8 @@ import React from "react";
 import {Routes, Route, Link} from "react-router-dom";
 import Home from '../App';
 import Cadastro from './cadastro';
+import '../reset.css';
+import '../App.css';
 
 class Contatos extends React.Component {
     
@@ -9,11 +11,19 @@ class Contatos extends React.Component {
         super(props);
 
         this.state = {
-            contatos: [
-                {'nome':'Luis Guilherme', 'email':'luis.guilherme@email.com', 'telefone':'123456789'},
-                {'nome':'Thyago Capeleti', 'email':'thyago.capeleti@email.com', 'telefone':'129078435'},
-            ]
+            contatos: []
         }
+    }
+
+    componentDidMount() {
+        fetch("http://localhost:3006/contatos")
+        .then(resposta => resposta.json())
+        .then(dados => {
+            this.setState({contatos : dados})
+        })
+    }
+
+    componentWillUnmount() {
     }
 
     render (){
@@ -26,6 +36,7 @@ class Contatos extends React.Component {
                 </Routes>
             </header>
             <main className="corpo">
+                <div className="caixa">
                 <div>
                     <thead>
                         <tr>
@@ -36,24 +47,20 @@ class Contatos extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-
                         {
                             this.state.contatos.map((contato) => 
                                 <tr>
                                     <td>{contato.nome}</td>
                                     <td>{contato.email}</td>
-                                    <td>{contato.telefone}</td>
-                                    <td>Atualizar Deletar</td>
+                                    <td>{contato.tel}</td>
+                                    <td><button className="btnCadastrar">Atualizar</button><button className="btnCadastrar">Deletar</button></td>
                                 </tr>
                             )
-                        }
-
-                        
+                        }                        
                     </tbody>
                 </div>
-                <div className="caixa">
                     <ul className="caixaBotao">
-                        <li><Link to="/cadastro_contato"  className="btnCadastrar rota" type="submit">Cadastrar</Link></li>
+                        <li><Link to="/cadastro_contato" className="btnCadastrar rota" type="submit">Cadastrar</Link></li>
                         <li><Link to="/home" className="btnVisualizar rota">Home</Link></li>
                     </ul>
                 </div>

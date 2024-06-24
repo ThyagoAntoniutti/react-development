@@ -66,6 +66,7 @@ input::placeholder {
 .caixaBotao {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 .btnCadastrar {
@@ -104,4 +105,14 @@ input::placeholder {
   background-color: #FFADA2;
   cursor: pointer;
   transform: scale(1.2);
+}
+
+td {
+  padding: 20px;
+  font-size: 2rem;
+}
+
+th {
+  padding: 20px;
+  font-size: 2rem;
 }
