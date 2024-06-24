@@ -11,6 +11,16 @@ export default function Conteudo(){
     const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
 
+    submit(){
+        const contato = {
+            nome: this.state.nome,
+            email: this.state.email,
+            tel: this.state.tel
+        }
+
+        this.cadastraAluno;
+    }
+
     return (
 
         <>
@@ -57,12 +67,11 @@ export default function Conteudo(){
                         </div>
 
                         <ul className="caixaBotao">
-                            <li><Link className="btnCadastrar rota" type="submit">Cadastrar</Link></li>
+                            <li><Link className="btnCadastrar rota" type="submit" onClick={this.submit}>Cadastrar</Link></li>
                             <li><Link to="/contatos_cadastrados" className="btnVisualizar rota">Visualizar contatos</Link></li>
                             <li><Link to="/home" className="btnVisualizar rota">Home</Link></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </main>

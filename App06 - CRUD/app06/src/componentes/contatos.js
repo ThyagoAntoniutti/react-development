@@ -16,6 +16,14 @@ class Contatos extends React.Component {
     }
 
     componentDidMount() {
+        this.buscarContato();
+    }
+
+    componentWillUnmount() {
+
+    }
+
+    buscarContato = () => {
         fetch("http://localhost:3006/contatos")
         .then(resposta => resposta.json())
         .then(dados => {
@@ -23,7 +31,13 @@ class Contatos extends React.Component {
         })
     }
 
-    componentWillUnmount() {
+    deletarContato = (id) => {
+        fetch("http://localhost:3006/contatos"+id, {method: 'DELETE'})
+        .then(resposta => {
+            if (resposta.ok) {
+                this.buscarContato();
+            }
+        })
     }
 
     render (){
@@ -53,7 +67,7 @@ class Contatos extends React.Component {
                                     <td>{contato.nome}</td>
                                     <td>{contato.email}</td>
                                     <td>{contato.tel}</td>
-                                    <td><button className="btnCadastrar">Atualizar</button><button className="btnCadastrar">Deletar</button></td>
+                                    <td><button className="btnCadastrar">Atualizar</button><button onClick={() => this.deletarContato(contato.id)} className="btnCadastrar">Deletar</button></td>
                                 </tr>
                             )
                         }                        
