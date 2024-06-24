@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poetsen+One&display=swap');
+
+.corpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.titulo_inicial {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #2e2e2e;
+}
+
+.caixa {
+  border-radius: 30px;
+  padding: 50px;
+  background: transparent;
+  border: 2px solid rgb(175, 175, 175);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dados {
+  margin: 20px;
+}
+
+label {
+  font-size: 2rem;
+  color: #2e2e2e;
+}
+
+.rota {
+  text-decoration: none;
+}
+
+input {
+  width: 400px;
+  height: 52px;
+  margin: 20px 0px;
+  border-radius: 18px;
+  border: none;
+  background-color: #EEEFDD;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px;
+}
+
+input::placeholder {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.caixaBotao {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnCadastrar {
+  padding: 10px;
+  border-radius: 18px;
+  border: none;
+  background-color: #F09964;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+
+.btnCadastrar:hover {
+  background-color: #782A1E;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btnVisualizar {
+  padding: 10px;
+  border-radius: 18px;
+  border: none;
+  background-color: #7FB2AD;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+
+.btnVisualizar:hover {
+  background-color: #FFADA2;
+  cursor: pointer;
+  transform: scale(1.2);
+}
